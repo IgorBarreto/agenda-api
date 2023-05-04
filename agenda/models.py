@@ -12,16 +12,16 @@ class Contato(models.Model):
     )
     endereco = models.CharField(max_length=255)
     TELEFONE_CHOICES = (
-        ("Trabalho", "Trabalho"),
-        ("Celular", "Celular"),
-        ("Casa", "Casa"),
+        ('Trabalho', 'Trabalho'),
+        ('Celular', 'Celular'),
+        ('Casa', 'Casa'),
     )
     tipo_telefone = models.CharField(
         max_length=50,
         choices=TELEFONE_CHOICES,
         blank=False,
         null=False,
-        default='Tr',
+        default='Celular',
     )
     dt_criacao = models.DateTimeField(auto_now_add=True)
     dt_atualizacao = models.DateTimeField(auto_now=True)
